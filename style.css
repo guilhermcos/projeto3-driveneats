@@ -1,6 +1,7 @@
 body {
     font-family: roboto;
     font-weight: 400;
+    background-color: #e5e5e5;
 }
 
 header {
@@ -38,4 +39,45 @@ h2 {
     position: absolute;
     left: 21px;
     top: 57px;
+}
+
+main h3 {
+    height: 25px;
+    width: 250px;
+    margin-left: 19px;
+    margin-top: 123px;
+    font-family: Righteous;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32.28px;
+    color: #333333;
+}
+
+main h4 {
+    height: 25px;
+    width: 231px;
+    margin-left: 19px;
+    margin-top: 27px;
+    font-family: Righteous;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32.28px;
+    color: #333333;
+}
+
+.pratos {
+    display: flex;
+    gap: 16px;
+    margin-top: 17px;
+}
+
+.pratos div:nth-child(1) {
+    margin-left: 19px;
+}
+
+.pratos div {
+    height: 216px;
+    width: 172px;
+    background-color: #ffffff;
+    border-radius: 9px;
 }
