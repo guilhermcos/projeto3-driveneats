@@ -141,7 +141,7 @@ main h5 {
 
 .sobremesas > div {
     position: relative;
-    height: 190px;
+    height: 197px;
     width: 172px;
     background-color: #ffffff;
     border-radius: 9px;
@@ -223,7 +223,7 @@ main h5 {
     line-height: 18.75px;
     color: #333333;
     margin-left: 15px;
-    margin-top: 8px;
+    margin-top: 7px;
 }
 
 .descricao-sobremesa {
@@ -234,7 +234,7 @@ main h5 {
     line-height: 17.58px;
     color: #a6a6a6;
     margin-left: 14px;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 .preco-sobremesa {
@@ -244,7 +244,7 @@ main h5 {
     line-height: 18.75px;
     color: #000000;
     margin-left: 14px;
-    margin-top: 9px;
+    margin-top: 7px;
 }
 
 .bebidas {
