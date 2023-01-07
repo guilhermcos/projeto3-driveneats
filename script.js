@@ -1,6 +1,6 @@
 /*seleçao cardápio*/
 var pratoNome,pratoPreco,bebidaNome,bebidaPreco,sobremesaNome,sobremesaPreco;
-var pedidosEscolhidos = false
+var pedidosEscolhidos = 0;
 
 function selecionarPrato(elemento){
     const elementoSelecionado = document.querySelector("div.pratos .selecionado");
@@ -48,21 +48,21 @@ function tudoEscolhido(){
     const pratos = document.querySelector("div.pratos .selecionado");
     const bebidas = document.querySelector("div.bebidas .selecionado");
     const sobremesas = document.querySelector("div.sobremesas .selecionado");
-    if (pratos != null && bebidas != null && sobremesas != null && pedidosEscolhidos != true) {
+    if (pratos !== null && bebidas !== null && sobremesas !== null && pedidosEscolhidos !== 1) {
         const bloqueado = document.querySelector("button.botaoBloqueado");
         const desbloqueado = document.querySelector("button.botaoDesbloqueado");
         bloqueado.classList.remove("botaoBloqueado");
         bloqueado.classList.add("display-none");
         desbloqueado.classList.remove("display-none");
         desbloqueado.classList.add("display-flex");
-        pedidosEscolhidos = true
+        pedidosEscolhidos = 1;
     }
 }
 
 function fecharPedido() {
     //aparece tela de confirmação
-    document.querySelector("div.fundo-opaco-confirmacao").classList.remove("display-none")
-    document.querySelector("div.container-confirma-dados").classList.remove("display-none")
+    document.querySelector("div.fundo-opaco-confirmacao").classList.remove("display-none");
+    document.querySelector("div.container-confirma-dados").classList.remove("display-none");
 
     //adiciona nome dos pedidos selecionado na tela de confirmação
     document.querySelector("div.pedido-comida span.nome-pedido").innerHTML = pratoNome;
@@ -84,18 +84,14 @@ function fecharPedido() {
 
     //operação de soma dos valores
     const valorTotal = pratoPrecoConvertido+bebidaPrecoConvertido+sobremesaPrecoConvertido;
-    
     //conversão e colocando valor total mostrado na tela de confirmação de pedido
-
     let totalMostrado = "R$ "+valorTotal.toFixed(2);
     totalMostrado = totalMostrado.replace(".",",");
-
     //adiçao do valor total para a tela de confirmação confirmação
     document.querySelector(".total-confirmar .preco-total").innerHTML = totalMostrado;
-    
 }
 
 function cancelarPedido() {
-    document.querySelector("div.fundo-opaco-confirmacao").classList.add("display-none")
-    document.querySelector("div.container-confirma-dados").classList.add("display-none")
+    document.querySelector("div.fundo-opaco-confirmacao").classList.add("display-none");
+    document.querySelector("div.container-confirma-dados").classList.add("display-none");
 }
