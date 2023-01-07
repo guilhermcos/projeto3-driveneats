@@ -60,6 +60,42 @@ function tudoEscolhido(){
 }
 
 function fecharPedido() {
+    //aparece tela de confirmação
     document.querySelector("div.fundo-opaco-confirmacao").classList.remove("display-none")
     document.querySelector("div.container-confirma-dados").classList.remove("display-none")
+
+    //adiciona nome dos pedidos selecionado na tela de confirmação
+    document.querySelector("div.pedido-comida span.nome-pedido").innerHTML = pratoNome;
+    document.querySelector("div.pedido-bebida span.nome-pedido").innerHTML = bebidaNome;
+    document.querySelector("div.pedido-sobremesa span.nome-pedido").innerHTML = sobremesaNome;
+
+    //adiciona preços convertidos parcialmente na tela de confirmação
+    const pratoPrecoConfirm = pratoPreco.replace("R$","");
+    document.querySelector("div.pedido-comida span.preco-pedido").innerHTML = pratoPrecoConfirm;
+    const bebidaPrecoConfirm = bebidaPreco.replace("R$","");
+    document.querySelector("div.pedido-bebida span.preco-pedido").innerHTML = bebidaPrecoConfirm;
+    const sobremesaPrecoConfirm = sobremesaPreco.replace("R$","");
+    document.querySelector("div.pedido-sobremesa span.preco-pedido").innerHTML = sobremesaPrecoConfirm;
+
+    //converte valores totalmente para numeros js
+    const pratoPrecoConvertido = Number(pratoPrecoConfirm.replace(",","."));
+    const bebidaPrecoConvertido = Number(bebidaPrecoConfirm.replace(",","."));
+    const sobremesaPrecoConvertido = Number(sobremesaPrecoConfirm.replace(",","."));
+
+    //operação de soma dos valores
+    const valorTotal = pratoPrecoConvertido+bebidaPrecoConvertido+sobremesaPrecoConvertido;
+    
+    //conversão e colocando valor total mostrado na tela de confirmação de pedido
+
+    let totalMostrado = "R$ "+valorTotal.toFixed(2);
+    totalMostrado = totalMostrado.replace(".",",");
+
+    //adiçao do valor total para a tela de confirmação confirmação
+    document.querySelector(".total-confirmar .preco-total").innerHTML = totalMostrado;
+    
+}
+
+function cancelarPedido() {
+    document.querySelector("div.fundo-opaco-confirmacao").classList.add("display-none")
+    document.querySelector("div.container-confirma-dados").classList.add("display-none")
 }
