@@ -26,14 +26,14 @@
                 <img src="images/frango_yin_yang.png" alt="">
                 <div class="nome-prato">Frango Yin Yang</div>
                 <div class="descricao-prato">Um pouco de batata, um pouco de salada</div>
-                <div class="preco-prato">R$14,90</div>
+                <div class="preco-prato">R$15,00</div>
                 <img class="check-icon display-none" src="images/Vectorcheck-icon.svg" alt="">
             </div>
             <div onclick="selecionarPrato(this);tudoEscolhido()" class="">
                 <img src="images/frango_yin_yang.png" alt="">
-                <div class="nome-prato">Frango Yin Yang</div>
+                <div class="nome-prato">Franguin diliça</div>
                 <div class="descricao-prato">Um pouco de batata, um pouco de salada</div>
-                <div class="preco-prato">R$14,90</div>
+                <div class="preco-prato">R$20,00</div>
                 <img class="check-icon display-none" src="images/Vectorcheck-icon.svg" alt="">
             </div>
             <div onclick="selecionarPrato(this);tudoEscolhido()" class="">
@@ -51,21 +51,21 @@
                 <img class="check-icon display-none" src="images/Vectorcheck-icon.svg" alt="">
             </div>
         </div>
-        <!--final div-pratos-->
+        <!-- final div-pratos -->
         <h4>Agora, sua bebida</h4>
         <div class="bebidas">
             <div onclick="selecionarBebida(this);tudoEscolhido()" class="">
                 <img src="images/coca-cola.png" alt="">
                 <div class="nome-bebida">Coquinha gelada</div>
                 <div class="descricao-bebida">Lata 350ml</div>
-                <div class="preco-bebida">R$4,90</div>
+                <div class="preco-bebida">R$5,00</div>
                 <img class="check-icon display-none" src="images/Vectorcheck-icon.svg" alt="">
             </div>
             <div onclick="selecionarBebida(this);tudoEscolhido()" class="">
                 <img src="images/coca-cola.png" alt="">
-                <div class="nome-bebida">Coquinha gelada</div>
+                <div class="nome-bebida">Coquinha quente</div>
                 <div class="descricao-bebida">Lata 350ml</div>
-                <div class="preco-bebida">R$4,90</div>
+                <div class="preco-bebida">R$3,50</div>
                 <img class="check-icon display-none" src="images/Vectorcheck-icon.svg" alt="">
             </div>
             <div onclick="selecionarBebida(this);tudoEscolhido()" class="">
@@ -114,13 +114,44 @@
                 <img class="check-icon display-none" src="images/Vectorcheck-icon.svg" alt="">
             </div>
         </div>
+
+        <!-- tela de confirmação de pedido -->
+        <div class="fundo-opaco-confirmacao display-none"></div>
+        <div class="container-confirma-dados opacidade-fundo display-none">
+            <div class="confirma-dados">
+                <h1>Confirme seu pedido</h1>
+                <div class="pedido pedido-comida">
+                    <span class="nome-pedido">Frango Yin yang</span>
+                    <span class="preco-pedido">28,90</span>
+                </div>
+                <div class="pedido pedido-bebida">
+                    <span class="nome-pedido">Frango Yin yang</span>
+                    <span class="preco-pedido">28,90</span>
+                </div>
+                <div class="pedido pedido-sobremesa">
+                    <span class="nome-pedido">Frango Yin yang</span>
+                    <span class="preco-pedido">28,90</span>
+                </div>
+                <div class="total-confirmar">
+                    <span>TOTAL</span>
+                    <span class="preco-total">R$ 28,90</span>
+                </div>
+                <button class="botao-confirmar-pedido">
+                    <p>Tudo certo, pode pedir!</p>
+                </button>
+                <div onclick="" class="botao-cancelar-pedido">
+                    <p>Cancelar</p>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>
-        <div onclick="botao()" class="botaoBloqueado">
+        <div class="botaoBloqueado">
             <h3>Selecione os 3 itens para fechar o pedido</h3>
         </div>
-        <div onclick="botao()" class="botaoDesbloqueado display-none">
+        <div onclick="fecharPedido()" class="botaoDesbloqueado display-none">
             <h3>Fechar pedido</h3>
         </div>
     </footer>

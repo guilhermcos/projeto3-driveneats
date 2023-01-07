@@ -1,3 +1,8 @@
+button {
+    outline: none;
+    border: 0px;
+}
+
 body {
     font-family: roboto;
     font-weight: 400;
@@ -298,6 +303,7 @@ footer {
     justify-content: center;
 }
 
+
 .botaoBloqueado h3 {
     color: #ffffff;
     font-family: roboto;
@@ -335,4 +341,133 @@ footer {
     line-height: 23.44px;
     width: 200px;
     text-align: center;
+}
+
+/*==============TELA DE CONFIRMAÇÃO DE PEDIDO==========*/
+
+.fundo-opaco-confirmacao {
+    z-index: 11;
+    background-color: #ffffff;
+    opacity: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-confirma-dados {
+    z-index: 12;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.confirma-dados {
+    background-color: #50D074;
+    height: 353px;
+    width: 377px;
+    margin-top: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 9px;
+}
+
+.confirma-dados h1 {
+    height: 27px;
+    width: 100%;
+    margin: 0;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25.78px;
+    color: #ffffff;
+    position: absolute;
+    text-align: center;
+    top: 21px;
+    left: 0;
+}
+
+.pedido {
+    font-family: roboto;
+    font-size: 22px;
+    line-height: 25.78px;
+    font-weight: 400;
+    color: #ffffff;
+    width: 326px;
+    position: absolute;
+    left: 26px;
+    height: 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pedido-comida {
+    top: 76px;
+}
+
+.pedido-bebida {
+    top: 116px;
+}
+
+.pedido-sobremesa {
+    top: 156px;
+}
+
+.total-confirmar {
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25.78px;
+    color: #ffffff;
+    width: 326px;
+    position: absolute;
+    top: 196px;
+    left: 26px;
+    height: 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao-confirmar-pedido {
+    width: 329px;
+    height: 52px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 24px;
+    top: 247px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-confirmar-pedido {
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25.78px;
+    color: #50D074;
+}
+
+.botao-cancelar-pedido {
+    width: 333px;
+    height: 52px;
+    position: absolute;
+    left: 24px;
+    top: 299px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-cancelar-pedido p {
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26.44px;
+    color: #ffffff;
 }
