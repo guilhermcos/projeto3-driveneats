@@ -49,8 +49,8 @@ function tudoEscolhido(){
     const bebidas = document.querySelector("div.bebidas .selecionado");
     const sobremesas = document.querySelector("div.sobremesas .selecionado");
     if (pratos != null && bebidas != null && sobremesas != null && pedidosEscolhidos != true) {
-        const bloqueado = document.querySelector("div.botaoBloqueado");
-        const desbloqueado = document.querySelector("div.botaoDesbloqueado");
+        const bloqueado = document.querySelector("button.botaoBloqueado");
+        const desbloqueado = document.querySelector("button.botaoDesbloqueado");
         bloqueado.classList.remove("botaoBloqueado");
         bloqueado.classList.add("display-none");
         desbloqueado.classList.remove("display-none");
