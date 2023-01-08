@@ -1,6 +1,7 @@
 /*seleçao cardápio*/
 var pratoNome,pratoPreco,bebidaNome,bebidaPreco,sobremesaNome,sobremesaPreco;
 var pedidosEscolhidos = 0;
+var totalMostrado;
 
 function selecionarPrato(elemento){
     const elementoSelecionado = document.querySelector("div.pratos .selecionado");
@@ -85,10 +86,18 @@ function fecharPedido() {
     //operação de soma dos valores
     const valorTotal = pratoPrecoConvertido+bebidaPrecoConvertido+sobremesaPrecoConvertido;
     //conversão e colocando valor total mostrado na tela de confirmação de pedido
-    let totalMostrado = "R$ "+valorTotal.toFixed(2);
+    totalMostrado = "R$ "+valorTotal.toFixed(2);
     totalMostrado = totalMostrado.replace(".",",");
     //adiçao do valor total para a tela de confirmação confirmação
     document.querySelector(".total-confirmar .preco-total").innerHTML = totalMostrado;
+    totalMostrado=totalMostrado.replace(",",".");
+}
+
+function finalizarPedido() {
+    const nomeCliente = prompt("Informe seu nome:");
+    const enderecoCliente = prompt("Informe seu endereço:")
+    const mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${pratoNome}\n- Bebida: ${bebidaNome}\n- Sobremesa: ${sobremesaNome}\nTotal: ${totalMostrado}\n\nNome: ${nomeCliente}\nEndereço: ${enderecoCliente}`;
+    window.open(`https://wa.me/5521997576586?text=${encodeURIComponent(mensagem)}`);
 }
 
 function cancelarPedido() {
