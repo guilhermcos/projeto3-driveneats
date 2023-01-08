@@ -56,6 +56,7 @@ function tudoEscolhido(){
         bloqueado.classList.add("display-none");
         desbloqueado.classList.remove("display-none");
         desbloqueado.classList.add("display-flex");
+        desbloqueado.disabled = false;
         pedidosEscolhidos = 1;
     }
 }
