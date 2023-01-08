@@ -95,8 +95,10 @@ function fecharPedido() {
 }
 
 function finalizarPedido() {
-    const nomeCliente = prompt("Informe seu nome:");
-    const enderecoCliente = prompt("Informe seu endereço:")
+    let nomeCliente = prompt("Informe seu nome:");
+    if (nomeCliente === null || nomeCliente === "") {nomeCliente = "Nome não informado.";}
+    let enderecoCliente = prompt("Informe seu endereço:");
+    if (enderecoCliente === null || enderecoCliente === "") {enderecoCliente = "Endereço não informado.";}
     const mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${pratoNome}\n- Bebida: ${bebidaNome}\n- Sobremesa: ${sobremesaNome}\nTotal: ${totalMostrado}\n\nNome: ${nomeCliente}\nEndereço: ${enderecoCliente}`;
     window.open(`https://wa.me/5521997576586?text=${encodeURIComponent(mensagem)}`);
 }
